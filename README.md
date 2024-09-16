@@ -24,9 +24,9 @@ Today we will learn about Components and Props to help us accomplish some tasks 
 
 1. In the `App.js` file, the `App` component currently returns an `<h1>` element with the text "Welcome to React!" Delete this `<h1>` element, and replace it with a `<div>` element with the `className` of "app" so that the `App` component returns this `<div>` element.
 2. Create a new file called `Header.js` inside of the `components` folder. Then, inside of the `Header.js` file, create a `Header` component that will return a `<header>` element that contains the following elements inside it:
-- An `<h1>` element.
-- The `<h1>` element must have the text "Flatapets" inside it, as well as a `<span>` element inside it.
-- The `<span>` element must have the `className` of "logo", and must have the 🐈 emoji inside it.
+    - An `<h1>` element.
+    - The `<h1>` element must have the text "Flatapets" inside it, as well as a `<span>` element inside it.
+    - The `<span>` element must have the `className` of "logo", and must have the 🐈 emoji inside it.
 3. Export your `Header` component from `Header.js`. Import your `Header` component into `App.js`.
 4. Render the `Header` component inside of the `<div>` element returned from the `App` component.
 5. Create a new file called `PetList.js` inside of the `components` folder. Then, inside of the `PetList.js` file, create a `PetList` component that will return a `<ul>` element with the `className` of "pet-list".

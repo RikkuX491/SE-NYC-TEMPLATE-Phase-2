@@ -1,6 +1,7 @@
 # Lecture # 2 - Components & Props
 
 ## Lecture Topics
+
 - Review the benefits of React over Vanilla JS
 - Review the difference between HTML and JSX
 - Review the importance of Components
@@ -11,6 +12,7 @@
 - Observe how to render multiple components from a list
 
 ## Setup
+
 Please make sure that you are inside the folder for this repository which contains the `package.json` file before following these instructions for setup:
 
 1. Run `npm install` in your terminal to install the dependencies from the `package.json` file.

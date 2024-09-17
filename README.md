@@ -58,41 +58,21 @@ Today we will learn about the fundamentals of React, including Components, to he
 9. Render the `PetList` component inside of the `<div>` element returned from the `App` component. The `PetList` component should be rendered after the `Header` component.
 10. Create a folder named `data` inside of the `src` folder that is within the `pets-app` folder.
 11. Create a file named `petsData.js` inside of the `data` folder.
-12. Inside of the `petsData.js` file, write the code to create an array that is stored inside of a variable named `pets`. The array should contain 7 elements, each of which are objects with the following data:
-    - Object # 1 has the following key and value pairs:
-      - A key named `id` with the value of `1`
-      - A key named `name` with the value of `Fido`
-      - A key named `image` with the value of `images/dog.jpeg`
-    - Object # 2 has the following key and value pairs:
-      - A key named `id` with the value of `2`
-      - A key named `name` with the value of `Kitty`
-      - A key named `image` with the value of `images/cat.png`
-    - Object # 3 has the following key and value pairs:
-      - A key named `id` with the value of `3`
-      - A key named `name` with the value of `Hammy`
-      - A key named `image` with the value of `images/hamster.jpeg`
-    - Object # 4 has the following key and value pairs:
-      - A key named `id` with the value of `4`
-      - A key named `name` with the value of `Polly`
-      - A key named `image` with the value of `images/parrot.jpeg`
-    - Object # 5 has the following key and value pairs:
-      - A key named `id` with the value of `5`
-      - A key named `name` with the value of `Angel`
-      - A key named `image` with the value of `images/horse.jpeg`
-    - Object # 6 has the following key and value pairs:
-      - A key named `id` with the value of `6`
-      - A key named `name` with the value of `Fluffy`
-      - A key named `image` with the value of `images/guinea-pig.jpeg`
-    - Object # 7 has the following key and value pairs:
-      - A key named `id` with the value of `7`
-      - A key named `name` with the value of `Goldie`
-      - A key named `image` with the value of `images/fish.jpeg`
-13. Export the `pets` variable from `petsData.js`. Import the `pets` variable into `PetList.js`.
-14. In the `PetList` component, use the `.map()` array iterator to iterate over the `pets` array that you imported into `PetList.js` and create a list of `<li>` elements which should be rendered inside of the `<ul>` element in the `PetList` component.
-15. Each of the `<li>` elements must contain a `className` of "pet", and must contain the following elements inside it:
-    - An `<img>` element. The `<img>` element's `src` attribute must have the value of the pet's image. The `<img>` element's `alt` attribute must have the value of the pet's name.
-    - An `<h4>` element. The pet's name should display inside of this `<h4>` element.
-16. Create a `key` prop for the `<li>` elements - this is necessary since we are creating a list of `<li>` elements. The value of the `key` prop should be the `id` for the pet object.
+12. Inside of the `petsData.js` file, write the code to create the following two variables, each of which will be assigned the value of an object as follows:
+    - Create a variable named `dog` whose value is an `object` with the following key and value pairs:
+      - A key named `name` with the value of the string `Fido`.
+      - A key named `image` with the value of the string `images/dog.jpeg`.
+    - Create a variable named `cat` whose value is an `object` with the following key and value pairs:
+      - A key named `name` with the value of the string `Kitty`.
+      - A key named `image` with the value of the string `images/cat.png`.
+13. Export the `dog` and `cat` variables that you created in the previous deliverable from `petsData.js`. Import these variables into `PetList.js`.
+14. In the `PetList` component, create two `<li>` elements which should be rendered inside of the `<ul>` element in the `PetList` component. Each of the `<li>` elements must contain a `className` of "pet".
+15. The first `<li>` element must contain the following elements inside it:
+    - An `<img>` element. The `<img>` element's `src` attribute must have the value of the dog's image. The `<img>` element's `alt` attribute must have the value of the dog's name.
+    - An `<h4>` element. The dog's name should display inside of this `<h4>` element.
+16. The second `<li>` element must contain the following elements inside it:
+    - An `<img>` element. The `<img>` element's `src` attribute must have the value of the cat's image. The `<img>` element's `alt` attribute must have the value of the cat's name.
+    - An `<h4>` element. The cat's name should display inside of this `<h4>` element.
 
 ## Creating a React App
 

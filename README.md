@@ -1,6 +1,7 @@
 # Lecture # 1 - Introduction to React
 
 ## Lecture Topics
+
 - Learn how to create a React application and start it
 - Learn about imports and exports in React
 - Discuss the benefits of React over Vanilla JS
@@ -8,10 +9,9 @@
 - Discuss the importance of Components
 - Learn how a Component is written
 - Learn how to render a Component
-- Observe how to render multiple elements from a list
-- Discuss the importance of the key prop for a list of elements / components
 
 ## Setup
+
 Please make sure that you are inside the folder for this repository (the `SE-NYC-071524-Phase-2` folder) before following these instructions for setup:
 
 1. Run the following command in the terminal to create a new React application named `pets-app`:
@@ -45,19 +45,30 @@ We've been asked to build a website for a new pet adoption center, Flatapets, th
 Today we will learn about the fundamentals of React, including Components, to help us accomplish some tasks related to displaying data on the website.
 
 1. In the `App.js` file, the `App` component currently returns an `<div>` element with the `className` of `App` that contains some starter code. Delete this `<div>` element along with its starter code.
+
 2. The `App` component should return a `<div>` element with the `className` of "app".
+
 3. Create a folder named `components` within the `src` folder.
+
 4. Create a new file named `Header.js` inside of the `components` folder. Then, inside of the `Header.js` file, create a `Header` component that will return a `<header>` element that contains the following elements inside it:
    - An `<h1>` element.
    - The `<h1>` element must have the text "Flatapets" inside it, as well as a `<span>` element inside it.
    - The `<span>` element must have the `className` of "logo", and must have the 🐈 emoji inside it.
+
 5. Export your `Header` component from `Header.js`. Import your `Header` component into `App.js`.
+
 6. Render the `Header` component inside of the `<div>` element returned from the `App` component.
+
 7. Create a new file called `PetList.js` inside of the `components` folder. Then, inside of the `PetList.js` file, create a `PetList` component that will return a `<ul>` element with the `className` of "pet-list".
+
 8. Export your `PetList` component from `PetList.js`. Import your `PetList` component into `App.js`.
+
 9. Render the `PetList` component inside of the `<div>` element returned from the `App` component. The `PetList` component should be rendered after the `Header` component.
+
 10. Create a folder named `data` inside of the `src` folder that is within the `pets-app` folder.
+
 11. Create a file named `petsData.js` inside of the `data` folder.
+
 12. Inside of the `petsData.js` file, write the code to create the following two variables, each of which will be assigned the value of an object as follows:
     - Create a variable named `dog` whose value is an `object` with the following key and value pairs:
       - A key named `name` with the value of the string `Fido`.
@@ -65,11 +76,15 @@ Today we will learn about the fundamentals of React, including Components, to he
     - Create a variable named `cat` whose value is an `object` with the following key and value pairs:
       - A key named `name` with the value of the string `Kitty`.
       - A key named `image` with the value of the string `images/cat.png`.
+
 13. Export the `dog` and `cat` variables that you created in the previous deliverable from `petsData.js`. Import these variables into `PetList.js`.
+
 14. In the `PetList` component, create two `<li>` elements which should be rendered inside of the `<ul>` element in the `PetList` component. Each of the `<li>` elements must contain a `className` of "pet".
+
 15. The first `<li>` element must contain the following elements inside it:
     - An `<img>` element. The `<img>` element's `src` attribute must have the value of the dog's image. The `<img>` element's `alt` attribute must have the value of the dog's name.
     - An `<h4>` element. The dog's name should display inside of this `<h4>` element.
+
 16. The second `<li>` element must contain the following elements inside it:
     - An `<img>` element. The `<img>` element's `src` attribute must have the value of the cat's image. The `<img>` element's `alt` attribute must have the value of the cat's name.
     - An `<h4>` element. The cat's name should display inside of this `<h4>` element.

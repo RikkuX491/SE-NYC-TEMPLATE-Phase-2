@@ -2,6 +2,7 @@
 
 ## Lecture Topics
 
+
 - Review the benefits of React over Vanilla JS
 - Review the difference between HTML and JSX
 - Review the importance of Components
@@ -13,6 +14,7 @@
 - Discuss the importance of the key prop for a list of components
 
 ## Setup
+
 
 Please make sure that you are inside the folder for this repository which contains the `package.json` file before following these instructions for setup:
 

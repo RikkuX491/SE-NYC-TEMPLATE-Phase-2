@@ -12,6 +12,7 @@
 Please make sure that you are inside the folder for this repository which contains the `package.json` file before following these instructions for setup:
 
 1. Run `npm install` in your terminal to install the dependencies from the `package.json` file.
+
 2. Run `npm start` in your terminal to run this React app in the browser. If your browser does not automatically open the page for you, open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Deliverables
@@ -27,10 +28,15 @@ import { useState } from "react";
 ```
 
 1. In the `Pet` Component in `Pet.js`, use `useState` to create a stateful variable named `count` and a setter function called `setCount`. The initial value for the state should be `0`.
+
 2. Modify the text content for the `<button>` element returned from the `Pet` component so that you are using the value of the `count` stateful variable instead of the `0` that is in the text content for the `button`.
+
 3. Add a click event listener to the `<button>` element returned from the `Pet` component. Clicking the button should invoke a callback function that will call the setter function `setCount`. Use the `setCount` setter function to increase the value of `count` by 1.
+
 4. In the `Pet` Component in `Pet.js`, use `useState` to create a stateful variable named `displayAnimalType` and a setter function called `setDisplayAnimalType`. The initial value for the state should be `false`.
+
 5. Use the ternary operator to set the value for the `className` attribute for the `<h4>` element returned from the `Pet` component to "display-animal-type" if the value of `displayAnimalType` is true, and "" (empty string) if the value of `displayAnimalType` is false. For the text content of the `<h4>` element, conditionally render either the pet's animal_type if `displayAnimalType` is true or the pet's name if `displayAnimalType` is false.
+
 6. Add a click event listener to the `<h4>` element returned from the `Pet` component. Clicking the button should invoke a callback function that will call the setter function `setDisplayAnimalType`. Use the `setDisplayAnimalType` setter function change the value of `displayAnimalType` to `true` if it is false, or change the value to `false` if it is true.
 
 ### Events

@@ -30,7 +30,7 @@ Today we will learn about Information Flow to help us accomplish some tasks rela
 
 Hint: You can use the `.filter()` array iterator method to create a new array that does not include the pet that you want to delete. Include only the pets whose id does **not** match the value of the `id` parameter.
 
-5. Pass the `deletePet` function as a prop to the `PetList` component. Then, in the `PetList` component, pass `deletePet` as a prop to each of the `Pet` components.
+5. Pass the `deletePet` function as a prop to the `PetList` component. Then, in the `PetList` component, pass `deletePet` as a prop to the `Pet` components.
 
 6. In the `Pet` component in `Pet.js`, add an `onClick` attribute (click event listener) to the `<button>` element returned from the `Pet` component. The value of the `onClick` attribute (click event listener) should be a callback function that invokes the `deletePet` function. Pass in the pet's id as an argument into the `deletePet` function.
 

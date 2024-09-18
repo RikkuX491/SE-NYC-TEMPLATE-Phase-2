@@ -34,7 +34,7 @@ Hint: You can use the `filter()` array iterator method to create a new array tha
 
 5. Pass the `deletePet` function as a prop to the `PetList` component. Then, in the `PetList` component, pass `deletePet` as a prop to the `Pet` components.
 
-6. In the `Pet` component in `Pet.js`, add an `onClick` attribute (click event listener) to the `<button>` element returned from the `Pet` component. The value of the `onClick` attribute (click event listener) should be a callback function that invokes the `deletePet` function. Pass in the pet's id as an argument into the `deletePet` function.
+6. In the `Pet` component in `Pet.js`, add an `onClick` attribute (click event listener) to the `<button className="adopt-button">` element returned from the `Pet` component. The value of the `onClick` attribute (click event listener) should be a callback function that invokes the `deletePet` function. Pass in the pet's id as an argument into the `deletePet` function.
 
 7. In the `Pet` component in `Pet.js`, render the value for the pet's likes where it says `/* pet's likes goes here */`
 

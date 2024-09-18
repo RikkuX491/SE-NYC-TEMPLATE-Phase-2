@@ -28,9 +28,9 @@ Today we will learn about Information Flow to help us accomplish some tasks rela
 
 Note: Make sure to change `pets.filter()` to `petsState.filter()` to maintain the correct functionality of the Search filter feature.
 
-4. In the `PetPage` component in `PetPage.js`, declare a function named `deletePet` that has one parameter called `id`. The `deletePet` function should remove a pet from the page. To do this, you will need to call the `setPetsState` setter function to update the value of the `petsState` to contain an array that excludes the pet that should be deleted.
+4. In the `PetPage` component in `PetPage.js`, declare a function named `deletePet` that has one parameter named `id`. The `deletePet` function should remove a pet from the page. To do this, you will need to call the `setPetsState` setter function to update the value of the `petsState` to contain an array that excludes the pet that should be deleted.
 
-Hint: You can use the `.filter()` array iterator method to create a new array that does not include the pet that you want to delete. Include only the pets whose id does **not** match the value of the `id` parameter.
+Hint: You can use the `filter()` array iterator method to create a new array that does not include the pet that you want to delete. Include only the pets whose `id` does **not** match the value of the `id` parameter.
 
 5. Pass the `deletePet` function as a prop to the `PetList` component. Then, in the `PetList` component, pass `deletePet` as a prop to the `Pet` components.
 
@@ -39,6 +39,10 @@ Hint: You can use the `.filter()` array iterator method to create a new array th
 7. In the `Pet` component in `Pet.js`, render the value for the pet's likes where it says `/* pet's likes goes here */`
 
 Hint: You can access the value for the pet's likes from the `pet` prop whose value is an `object` that has a key named `likes`.
+
+8. In the `PetPage` component in `PetPage.js`, declare a function named `updatePet` that has one parameter named `updatedPetData`. The `updatePet` function should update an existing pet on the page. To do this, you will need to call the `setPetsState` setter function to update the value of the `petsState` to contain an array that contains the updated data for the pet that should be updated.
+
+Hint: You can use the `map()` array iterator method to create a new array that includes the `updatedPetData` object if the value for the `id` key of `updatedPetData` is equal to the `id` for a pet in one of the iterations of `map()`, but does not change the data for the other pets. Update only the pet whose `id` matches the value of `updatedPetData.id`.
 
 ### Process: Building React Features With State
 

@@ -24,7 +24,7 @@ Today we will learn about Information Flow to help us accomplish some tasks rela
 
 2. Create a `Search` component by refactoring the `<div>` element out of the `PetPage` component and into the `Search` component. The `PetPage` component should render the `Search` component in place of the `<div>` element. Typing into the `<input>` inside of the `Search` component to search for pets should maintain the filter functionality. You will need to pass the `updateSearchText` function that you created in Deliverable # 1 as a prop to the `Search` component to order to maintain the functionality.
 
-3. In the `PetPage` component in `PetPage.js`, use `useState` to create a stateful variable named `petsState` and a setter function called `setPetsState`. The initial value for the state should be the `pets` variable.
+3. In the `PetPage` component in `PetPage.js`, use `useState` to create a stateful variable named `petsState` and a setter function called `setPetsState`. The initial value for the state should be the `pets` variable. Make sure to change `pets.filter()` to `petsState.filter()` to maintain the correct functionality of the Search filter feature.
 
 4. In the `PetPage` component in `PetPage.js`, declare a function named `deletePet` that has one parameter called `id`. The `deletePet` function should remove a pet from the page. To do this, you will need to call the `setPetsState` setter function to update the value of the `petsState` to contain an array that excludes the pet that should be deleted.
 

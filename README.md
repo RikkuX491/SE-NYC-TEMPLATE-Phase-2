@@ -44,6 +44,8 @@ Hint: You can access the value for the pet's likes from the `pet` prop whose val
 
 Hint: You can use the `map()` array iterator method to create a new array that includes the `updatedPetData` object if the value for the `id` key of `updatedPetData` is equal to the `id` for a pet in one of the iterations of `map()`, but does not change the data for the other pets. Update only the pet whose `id` matches the value of `updatedPetData.id`.
 
+9. Pass the `updatePet` function as a prop to the `PetList` component. Then, in the `PetList` component, pass `updatePet` as a prop to the `Pet` components.
+
 ### Process: Building React Features With State
 
 1. Decide: Do we need state for this feature? If so, where?

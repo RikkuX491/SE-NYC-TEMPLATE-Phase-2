@@ -1,5 +1,5 @@
 import PetList from "./PetList";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Search from './Search';
 import NewPetForm from "./NewPetForm";
 
@@ -7,12 +7,6 @@ function PetPage(){
 
     const [pets, setPets] = useState([])
     const [searchText, setSearchText] = useState("")
-
-    useEffect(() => {
-        fetch("http://localhost:4000/pets")
-        .then(response => response.json())
-        .then(petsData => setPets(petsData))
-    }, [])
 
     const filteredPets = pets.filter(pet => {
         return pet.name.toUpperCase().includes(searchText.toUpperCase())
@@ -23,7 +17,7 @@ function PetPage(){
     }
 
     function deletePet(id){
-        setPets((pets) => pets.filter(pet => {
+        setPets(pets.filter(pet => {
             return pet.id !== id
         }))
     }

@@ -20,7 +20,7 @@ function PetPage(){
     }
 
     function deletePet(id){
-        setPetsState((petsState) => petsState.filter(pet => {
+        setPetsState(petsState.filter(pet => {
             return pet.id !== id
         }))
     }

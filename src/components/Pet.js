@@ -8,10 +8,6 @@ function Pet({pet, deletePet}){
         setDisplayAnimalType(!displayAnimalType)
     }
 
-    function handleAdoptButtonClick(){
-        deletePet(pet.id)
-    }
-
     return (
         <li className="pet">
             <img src={pet.image} alt={pet.name}/>
@@ -21,7 +17,7 @@ function Pet({pet, deletePet}){
                 <button className="update-button">Update Pet</button>
                 <button className="like-button">{pet.likes} Likes</button>
                 <br/>
-                <button onClick={handleAdoptButtonClick} className="adopt-button">Adopt</button>
+                <button onClick={() => deletePet(pet.id)} className="adopt-button">Adopt</button>
             </div> :
             <form className="edit-pet">
                 <input type="text" name="name" placeholder="Pet name" />

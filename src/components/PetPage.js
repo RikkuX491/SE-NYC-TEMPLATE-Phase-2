@@ -23,8 +23,19 @@ function PetPage(){
     }
 
     function deletePet(id){
-        setPets((pets) => pets.filter(pet => {
+        setPets(pets.filter(pet => {
             return pet.id !== id
+        }))
+    }
+
+    function updatePet(updatedPetData){
+        setPets(pets.map(pet => {
+            if(pet.id === updatedPetData.id){
+                return updatedPetData
+            }
+            else{
+                return pet
+            }
         }))
     }
 
@@ -44,7 +55,7 @@ function PetPage(){
         <main>
             <NewPetForm addPet={addPet}/>
             <Search updateSearchText={updateSearchText} searchText={searchText}/>
-            <PetList pets={filteredPets} deletePet={deletePet}/>
+            <PetList pets={filteredPets} deletePet={deletePet} updatePet={updatePet}/>
         </main>
     );
 }

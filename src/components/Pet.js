@@ -1,11 +1,24 @@
 import { useState } from "react";
 
-function Pet({pet, deletePet}){
+function Pet({pet, deletePet, updatePet}){
 
     const [displayAnimalType, setDisplayAnimalType] = useState(false)
 
     function toggleDisplayAnimalType(){
         setDisplayAnimalType(!displayAnimalType)
+    }
+
+    function handleLikeButtonClick(){
+        const updatedPetData = {
+            ...pet,
+            likes: pet.likes + 1
+        }
+
+        updatePet(updatedPetData)
+    }
+
+    function handleAdoptButtonClick(){
+        deletePet(pet.id)
     }
 
     return (
@@ -15,9 +28,9 @@ function Pet({pet, deletePet}){
             { true ?
             <div className="button-div">
                 <button className="update-button">Update Pet</button>
-                <button className="like-button">{pet.likes} Likes</button>
+                <button onClick={handleLikeButtonClick} className="like-button">{pet.likes} Likes</button>
                 <br/>
-                <button onClick={() => deletePet(pet.id)} className="adopt-button">Adopt</button>
+                <button onClick={handleAdoptButtonClick} className="adopt-button">Adopt</button>
             </div> :
             <form className="edit-pet">
                 <input type="text" name="name" placeholder="Pet name" />

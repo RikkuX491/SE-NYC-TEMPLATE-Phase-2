@@ -5,7 +5,7 @@ function Pet({pet, deletePet}){
     const [displayAnimalType, setDisplayAnimalType] = useState(false)
 
     function toggleDisplayAnimalType(){
-        setDisplayAnimalType(displayAnimalType => !displayAnimalType)
+        setDisplayAnimalType(!displayAnimalType)
     }
 
     function handleAdoptButtonClick(){
@@ -19,7 +19,7 @@ function Pet({pet, deletePet}){
             { true ?
             <div className="button-div">
                 <button className="update-button">Update Pet</button>
-                <button className="like-button">{/* pet's number of likes goes here */} Likes</button>
+                <button className="like-button">{pet.likes} Likes</button>
                 <br/>
                 <button onClick={handleAdoptButtonClick} className="adopt-button">Adopt</button>
             </div> :

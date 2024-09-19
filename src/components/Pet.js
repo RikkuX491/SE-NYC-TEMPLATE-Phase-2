@@ -5,7 +5,7 @@ function Pet({pet}){
     const [displayAnimalType, setDisplayAnimalType] = useState(false)
 
     function toggleDisplayAnimalType(){
-        setDisplayAnimalType(displayAnimalType => !displayAnimalType)
+        setDisplayAnimalType(!displayAnimalType)
     }
 
     return (

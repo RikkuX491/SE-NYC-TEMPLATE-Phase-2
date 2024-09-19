@@ -25,11 +25,22 @@ function PetPage(){
         }))
     }
 
+    function updatePet(updatedPetData){
+        setPetsState(petsState.map(pet => {
+            if(pet.id === updatedPetData.id){
+                return updatedPetData
+            }
+            else{
+                return pet
+            }
+        }))
+    }
+
     return (
         <main>
             <NewPetForm/>
             <Search updateSearchText={updateSearchText}/>
-            <PetList pets={filteredPets} deletePet={deletePet}/>
+            <PetList pets={filteredPets} deletePet={deletePet} updatePet={updatePet}/>
         </main>
     );
 }

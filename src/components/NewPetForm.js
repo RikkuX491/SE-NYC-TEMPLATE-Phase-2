@@ -18,7 +18,8 @@ function NewPetForm({addPet}) {
 
     const newPet = {
       id: uuid(),
-      ...formData
+      ...formData,
+      likes: 0
     }
 
     addPet(newPet)

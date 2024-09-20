@@ -2,26 +2,26 @@ import { useState, useEffect } from "react";
 
 function PetProfile({deletePet, updatePet}){
 
-    const [pet, setPet] = useState(null)
-    const [displayAnimalType, setDisplayAnimalType] = useState(false)
-    const [displayForm, setDisplayForm] = useState(false)
+    const [pet, setPet] = useState(null);
+    const [displayAnimalType, setDisplayAnimalType] = useState(false);
+    const [displayForm, setDisplayForm] = useState(false);
     const [formData, setFormData] = useState({
         name: "",
         image: "",
         animal_type: ""
-    })
+    });
 
     useEffect(() => {
-        // Make a GET request to find a specific pet whose info should be displayed in this component
-    }, [])
+        // Make a GET request to find the pet whose info should be displayed in this component
+    }, []);
 
     function toggleDisplayAnimalType(){
         setDisplayAnimalType(displayAnimalType => !displayAnimalType)
     }
 
     function handleAdoptButtonClick(){
-        deletePet(pet.id)
-        setPet(null)
+        deletePet(pet.id);
+        setPet(null);
     }
 
     function toggleDisplayForm(){
@@ -29,12 +29,12 @@ function PetProfile({deletePet, updatePet}){
     }
 
     function handleSubmit(event){
-        event.preventDefault()
+        event.preventDefault();
 
-        updatePet(pet.id, formData)
-        setPet({...pet, ...formData})
+        updatePet(pet.id, formData);
+        setPet({...pet, ...formData});
 
-        toggleDisplayForm()
+        toggleDisplayForm();
     }
 
     function updateFormData(event){
@@ -42,11 +42,13 @@ function PetProfile({deletePet, updatePet}){
     }
 
     function handleLikeButtonClick(){
-        const updatedLikesObject = {likes: pet.likes + 1}
-        updatePet(pet.id, updatedLikesObject)
+        const updatedLikesObject = {likes: pet.likes + 1};
+
+        updatePet(pet.id, updatedLikesObject);
+
         setPet(pet => {
             return {...pet, likes: pet.likes + 1}
-        })
+        });
     }
 
     return (

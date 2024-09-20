@@ -2,7 +2,7 @@ import { useState } from "react";
 
 function Pet({pet}){
 
-    const [displayAnimalType, setDisplayAnimalType] = useState(false)
+    const [displayAnimalType, setDisplayAnimalType] = useState(false);
 
     function toggleDisplayAnimalType(){
         setDisplayAnimalType(displayAnimalType => !displayAnimalType)

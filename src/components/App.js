@@ -5,11 +5,11 @@ import NewPetForm from "./NewPetForm";
 
 function App(){
 
-    const [pets, setPets] = useState([])
-    
-    // const [route, setRoute] = useState(window.location.pathname)
+    const [pets, setPets] = useState([]);
 
-    // let component = null
+    // const [route, setRoute] = useState(window.location.pathname);
+
+    // let component = null;
     // if(route === "/"){
     //   component = <PetList pets={pets} deletePet={deletePet} updatePet={updatePet}/>
     // }
@@ -21,7 +21,7 @@ function App(){
         fetch('http://localhost:4000/pets')
         .then(response => response.json())
         .then(petsData => setPets(petsData))
-    }, [])
+    }, []);
 
     function deletePet(id){
         fetch(`http://localhost:4000/pets/${id}`, {
@@ -72,9 +72,9 @@ function App(){
     }
 
     // function navigate(event){
-    //   event.preventDefault()
+    //   event.preventDefault();
     //   window.history.pushState(null, "", event.target.href);
-    //   setRoute(window.location.pathname)
+    //   setRoute(window.location.pathname);
     // }
 
     return (

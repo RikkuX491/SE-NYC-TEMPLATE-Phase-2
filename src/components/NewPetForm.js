@@ -6,26 +6,26 @@ function NewPetForm({addPet}) {
     name: "",
     image: "",
     animal_type: ""
-  })
+  });
 
   function updateFormData(event){
     setFormData({...formData, [event.target.name]: event.target.value})
   }
 
   function handleSubmit(event){
-    event.preventDefault()
+    event.preventDefault();
 
     const newPet = {
       ...formData
-    }
+    };
 
-    addPet(newPet)
+    addPet(newPet);
     
     setFormData({
       name: "",
       image: "",
       animal_type: ""
-    })
+    });
   }
 
   return (

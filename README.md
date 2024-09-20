@@ -34,25 +34,27 @@ Hint: You can use the `filter()` array iterator method to create a new array tha
 
 5. Pass the `deletePet` function as a prop to the `PetList` component. Then, in the `PetList` component, pass `deletePet` as a prop to the `Pet` components.
 
-6. In the `Pet` component in `Pet.js`, add an `onClick` attribute (click event listener) to the `<button className="adopt-button">` element returned from the `Pet` component. The value of the `onClick` attribute (click event listener) should be a callback function that invokes the `deletePet` function. Pass in the pet's id as an argument into the `deletePet` function.
+6. In the `Pet` component in `Pet.js`, declare a function named `handleAdoptButtonClick`. When the `handleAdoptButtonClick` function is called, the `deletePet` function should be called and the pet's id should be passed as an argument into the `deletePet` function.
 
-7. In the `Pet` component in `Pet.js`, render the value for the pet's likes where it says `/* pet's likes goes here */`
+7. In the `Pet` component in `Pet.js`, add an `onClick` attribute (click event listener) to the `<button className="adopt-button">` element returned from the `Pet` component. The value of the `onClick` attribute (click event listener) should be the `handleAdoptButtonClick` function.
+
+8. In the `Pet` component in `Pet.js`, render the value for the pet's likes where it says `/* pet's likes goes here */`
 
 Hint: You can access the value for the pet's likes from the `pet` prop whose value is an `object` that has a key named `likes`.
 
-8. In the `PetPage` component in `PetPage.js`, declare a function named `updatePet` that has one parameter named `updatedPetData`. The `updatePet` function should update an existing pet on the page. To do this, you will need to call the `setPetsState` setter function to update the value of the `petsState` to contain an array that contains the updated data for the pet that should be updated.
+9. In the `PetPage` component in `PetPage.js`, declare a function named `updatePet` that has one parameter named `updatedPetData`. The `updatePet` function should update an existing pet on the page. To do this, you will need to call the `setPetsState` setter function to update the value of the `petsState` to contain an array that contains the updated data for the pet that should be updated.
 
 Hint: You can use the `map()` array iterator method to create a new array that includes the `updatedPetData` object if the value for the `id` key of `updatedPetData` is equal to the `id` for a pet in one of the iterations of `map()`, but does not change the data for the other pets. Update only the pet whose `id` matches the value of `updatedPetData.id`.
 
-9. Pass the `updatePet` function as a prop to the `PetList` component. Then, in the `PetList` component, pass `updatePet` as a prop to the `Pet` components.
+10. Pass the `updatePet` function as a prop to the `PetList` component. Then, in the `PetList` component, pass `updatePet` as a prop to the `Pet` components.
 
-10. In the `Pet` component in `Pet.js`, declare a function named `handleLikeButtonClick`. When the `handleLikeButtonClick` function is called, the following actions should occur:
+11. In the `Pet` component in `Pet.js`, declare a function named `handleLikeButtonClick`. When the `handleLikeButtonClick` function is called, the following actions should occur:
     - A variable named `updatedPetData` is declared using the `const` keyword, and an `object` is assigned to the `updatedPetData` variable that has a copy of the `pet` prop data as well as a key named `likes` whose value should be `pet.likes + 1`.
     - The `updatePet` function is called and `updatedPetData` is passed as an argument into the `updatePet` function.
     
 Hint: You can get a copy of the `pet` prop data by using the spread operator (i.e. `...pet`).
 
-11. In the `Pet` component in `Pet.js`, add an `onClick` attribute (click event listener) to the `<button className="like-button">` element returned from the `Pet` component. The value of the `onClick` attribute (click event listener) should be the `handleLikeButtonClick` function.
+12. In the `Pet` component in `Pet.js`, add an `onClick` attribute (click event listener) to the `<button className="like-button">` element returned from the `Pet` component. The value of the `onClick` attribute (click event listener) should be the `handleLikeButtonClick` function.
 
 ### Process: Building React Features With State
 

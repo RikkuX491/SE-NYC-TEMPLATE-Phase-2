@@ -8,7 +8,7 @@ function Pet({pet, deletePet, updatePet}){
         setDisplayAnimalType(!displayAnimalType)
     }
 
-    function handleClick(){
+    function handleLikeButtonClick(){
         const updatedPetData = {
             ...pet,
             likes: pet.likes + 1
@@ -17,12 +17,16 @@ function Pet({pet, deletePet, updatePet}){
         updatePet(updatedPetData)
     }
 
+    function handleAdoptButtonClick(){
+        deletePet(pet.id)
+    }
+
     return (
         <li className="pet">
             <img src={pet.image} alt={pet.name}/>
             <h4 onClick={toggleDisplayAnimalType} className={displayAnimalType ? "display-animal-type" : ""}>{displayAnimalType ? pet.animal_type : pet.name}</h4>
-            <button onClick={handleClick} className="like-button">{pet.likes} Likes</button>
-            <button onClick={() => deletePet(pet.id)} className="adopt-button">Adopt</button>
+            <button onClick={handleLikeButtonClick} className="like-button">{pet.likes} Likes</button>
+            <button onClick={handleAdoptButtonClick} className="adopt-button">Adopt</button>
         </li>
     );
 }

@@ -21,9 +21,9 @@ We've been asked to build a website for a new pet adoption center, Flatapets, th
 
 Today we will make a `PATCH` request in our React app to update our pet data in the JSON Server database and make a `DELETE` request to delete pets from the JSON Server database, so that we can persist updates and deletions in our React app / website.
 
-1. In the `Pet` component in `Pet.js`, create a state that includes a stateful variable named `displayForm` and a setter function called `setDisplayForm`. The initial value for the state should be `false`. The `Pet` component should conditionally render either the "button-div" `<div>` element if `displayForm` is `false` or the "edit-pet" `<form>` element is `displayForm` is `true`.
+1. In the `Pet` component in `Pet.js`, create a state that includes a stateful variable named `displayForm` and a setter function called `setDisplayForm`. The initial value for the state should be `false`. The `Pet` component should conditionally render either the `<div className="button-div">` element if `displayForm` is `false` or the `<form className="edit-pet">` element is `displayForm` is `true`.
 
-2. Click on the `<button className="update-button">` element in the `Pet` component in `Pet.js` and see the "edit-pet" `<form>` element in place of the "button-div" `<div>` element. If I `submit` the `<form>` by clicking on the `Save Changes` `<button>` inside of the "edit-pet" `<form>`, the "edit-pet" `<form>` element should be replaced with the "button-div" `<div>` element.
+2. Click on the `<button className="update-button">` element in the `Pet` component in `Pet.js` and see the `<form className="edit-pet">` element in place of the `<div className="button-div">` element. If I `submit` the `<form>` by clicking on the `Save Changes` `<button>` inside of the "edit-pet" `<form>`, the `<form className="edit-pet">` element should be replaced with the `<div className="button-div">` element.
 
 3. Clicking on the `<button className="like-button">` element rendered by the `Pet` component in `Pet.js` should make a `PATCH` request to persist updates for the increase in number of `likes` for the pet, in addition to updating the DOM. Implement a pessimistic rendering approach to update the number of `likes` for the pet by calling the `setPets` setter function to update the pets state appropriately.
 

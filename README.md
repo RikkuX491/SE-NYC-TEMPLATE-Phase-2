@@ -43,7 +43,7 @@ and added to our website.
 
 Note: The `uuid` library can be used to generate a unique id. The initial value for `likes` for a new pet should be `0`.
 
-3. Add the new pet to the website by updating state. Create a function named `addPet` in the `PetPage` component. The `addPet` function should have 1 parameter which should receive the value of the new pet to be added. When the `addPet` function is called, the `setPetsState` setter function should be called to update the `petsState` appropriately.
+4. Add the new pet to the website by updating state. Create a function named `addPet` in the `PetPage` component. The `addPet` function should have 1 parameter which should receive the value of the new pet to be added. When the `addPet` function is called, the `setPetsState` setter function should be called to update the `petsState` appropriately.
 
   **NOTE**: to add a new element to an array in state, it's a good idea to use
   the spread operator:
@@ -59,9 +59,9 @@ Note: The `uuid` library can be used to generate a unique id. The initial value 
   it's important to pass a _new_ array to the state setter function instead of
   mutating the original array.
 
-4. The `NewPetForm` component should have a prop named `addPet` that has the value of the `addPet` function. This prop should be destructured in the `NewPetForm` component as well.
+5. The `NewPetForm` component should have a prop named `addPet` that has the value of the `addPet` function. This prop should be destructured in the `NewPetForm` component as well.
 
-5. In the `NewPetForm` component in `Pet.js`, in the `handleSubmit` function, call the `addPet` function and pass in `newPet` as an argument to the `addPet` function.
+6. In the `NewPetForm` component in `Pet.js`, in the `handleSubmit` function, call the `addPet` function and pass in `newPet` as an argument to the `addPet` function.
 
 ## Using Forms
 

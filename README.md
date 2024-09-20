@@ -46,13 +46,13 @@ Hint: You can use the `map()` array iterator method to create a new array that i
 
 9. Pass the `updatePet` function as a prop to the `PetList` component. Then, in the `PetList` component, pass `updatePet` as a prop to the `Pet` components.
 
-10. In the `Pet` component in `Pet.js`, declare a function named `handleClick`. When the `handleClick` function is called, the following actions should occur:
+10. In the `Pet` component in `Pet.js`, declare a function named `handleLikeButtonClick`. When the `handleLikeButtonClick` function is called, the following actions should occur:
     - A variable named `updatedPetData` is declared using the `const` keyword, and an `object` is assigned to the `updatedPetData` variable that has a copy of the `pet` prop data as well as a key named `likes` whose value should be `pet.likes + 1`.
     - The `updatePet` function is called and `updatedPetData` is passed as an argument into the `updatePet` function.
     
 Hint: You can get a copy of the `pet` prop data by using the spread operator (i.e. `...pet`).
 
-11. In the `Pet` component in `Pet.js`, add an `onClick` attribute (click event listener) to the `<button className="like-button">` element returned from the `Pet` component. The value of the `onClick` attribute (click event listener) should be the `handleClick` function.
+11. In the `Pet` component in `Pet.js`, add an `onClick` attribute (click event listener) to the `<button className="like-button">` element returned from the `Pet` component. The value of the `onClick` attribute (click event listener) should be the `handleLikeButtonClick` function.
 
 ### Process: Building React Features With State
 

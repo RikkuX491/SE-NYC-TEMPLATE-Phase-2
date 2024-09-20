@@ -19,14 +19,16 @@ We've been asked to build a website for a new pet adoption center, Flatapets, th
 
 Today we will learn about how to work with Forms and controlled input in React to help us accomplish some tasks related to displaying data on the website.
 
-1. There is a new component called `NewPetForm` that will allow us to add new pets
+There is a new component called `NewPetForm` that will allow us to add new pets
 to our website. _When the form is submitted_, a new pet should be created
 and added to our website.
 
-- Make all the input fields for this form controlled inputs, so that you can
-  access all the form data via state. 
+1. Create and use state to control the values for each of the `<input type="text">` elements to make all the input fields for the `<form>` returned by the `NewPetForm` component controlled inputs, so that you can
+  access all the form `<input>` data via state.
 
-- Handle the form's _submit_ event, and use the data that you have saved in
+2. Create event handlers that are used to update the states created in Deliverable # 1. Each event handler should be assigned as the value for an `onChange` attribute for the appropriate `<input>` element.
+
+3. Create a function named `handleSubmit` in the `NewPetForm` component that is used to handle the form's _submit_ event, and use the data that you have saved in
   state to create a new pet object with the following properties:
 
   ``` jsx
@@ -41,7 +43,7 @@ and added to our website.
 
 Note: The `uuid` library can be used to generate a unique id. The initial value for `likes` for a new pet should be `0`.
 
-- Add the new pet to the website by updating state. You should create a prop called `addPet` as a callback which should be passed to the `NewPetForm` component. `addPet` should have 1 parameter which should receive the value of the new pet to be added.
+3. Add the new pet to the website by updating state. Create a function named `addPet` in the `PetPage` component. The `addPet` function should have 1 parameter which should receive the value of the new pet to be added. When the `addPet` function is called, the `setPetsState` setter function should be called to update the `petsState` appropriately.
 
   **NOTE**: to add a new element to an array in state, it's a good idea to use
   the spread operator:
@@ -56,6 +58,10 @@ Note: The `uuid` library can be used to generate a unique id. The initial value 
   new array, and then add new elements as well. When you're working with state,
   it's important to pass a _new_ array to the state setter function instead of
   mutating the original array.
+
+4. The `NewPetForm` component should have a prop named `addPet` that has the value of the `addPet` function. This prop should be destructured in the `NewPetForm` component as well.
+
+5. In the `NewPetForm` component in `Pet.js`, in the `handleSubmit` function, call the `addPet` function and pass in `newPet` as an argument to the `addPet` function.
 
 ## Using Forms
 

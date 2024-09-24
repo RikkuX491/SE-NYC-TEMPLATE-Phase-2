@@ -110,7 +110,7 @@ import { Outlet } from "react-router-dom";
       - A key named `updatePet` with the value of the `updatePet` function.
       - A key named `deletePet` with the value of the `deletePet` function.
 
-15. In the `PetList.js` file, delete the `pets`, `deletePet`, and `updatePet` props from the `PetList` component.
+15. In the `PetList.js` file, delete the `pets` prop from the `PetList` component.
 
 16. Write the following code to import `useOutletContext` into `PetList.js`:
 

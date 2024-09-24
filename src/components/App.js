@@ -89,7 +89,7 @@ function App(){
         {/* Render <Outlet/> component here and include a context prop that has the value of an object containing the data for pets, addPet, updatePet, and deletePet */}
         
         <NewPetForm addPet={addPet}/>
-        <PetList pets={pets} deletePet={deletePet} updatePet={updatePet}/>
+        <PetList pets={pets}/>
         {/* {component} */}
       </div>
     );

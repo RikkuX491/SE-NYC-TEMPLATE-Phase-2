@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 
-// Delete the deletePet, and updatePet props from the PetProfile component
-function PetProfile({deletePet, updatePet}){
+function PetProfile(){
 
     // Write the code to retrieve the value for the id parameter using useParams
 

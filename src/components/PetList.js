@@ -1,7 +1,7 @@
 import Pet from "./Pet";
 
-// Delete the pets, deletePet, and updatePet props from the PetList component
-function PetList({ pets, deletePet, updatePet }){
+// Delete the pets prop from the PetList component
+function PetList({ pets }){
 
     // Write the code to retrieve the pets stateful variable using useOutletContext()
 

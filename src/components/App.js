@@ -83,11 +83,7 @@ function App(){
           <a className={route === "/" ? "active" : ""} onClick={(event) => navigate(event, "/")} href="/">Home</a>
           <a className={route === "/add_pet" ? "active" : ""} onClick={(event) => navigate(event, "/add_pet")} href="/add_pet">Add Pet</a>
         </nav> */}
-
-        {/* Render <NavBar/> component here */}
         <Header/>
-        {/* Render <Outlet/> component here and include a context prop that has the value of an object containing the data for pets, addPet, updatePet, and deletePet */}
-        
         <NewPetForm addPet={addPet}/>
         <PetList pets={pets}/>
         {/* {component} */}

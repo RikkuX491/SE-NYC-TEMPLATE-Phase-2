@@ -1,6 +1,9 @@
 import { useState } from "react";
 
+// Delete the addPet prop from the NewPetForm component
 function NewPetForm({addPet}) {
+
+  // Write the code to retrieve the addPet function using useOutletContext()
 
   const [formData, setFormData] = useState({
     name: "",

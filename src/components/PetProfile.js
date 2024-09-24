@@ -1,7 +1,12 @@
 import { useState, useEffect } from "react";
 
+// Delete the deletePet, and updatePet props from the PetProfile component
 function PetProfile({deletePet, updatePet}){
 
+    // Write the code to retrieve the value for the id parameter using useParams
+
+    // Write the code to retrieve the updatePet and deletePet functions using useOutletContext()
+    
     const [pet, setPet] = useState(null);
     const [displayAnimalType, setDisplayAnimalType] = useState(false);
     const [displayForm, setDisplayForm] = useState(false);
@@ -12,7 +17,7 @@ function PetProfile({deletePet, updatePet}){
     });
 
     useEffect(() => {
-        // Make a GET request to find the pet whose info should be displayed in this component
+        // Write the code to make a GET request to find the pet whose info should be displayed in this component
     }, []);
 
     function toggleDisplayAnimalType(){

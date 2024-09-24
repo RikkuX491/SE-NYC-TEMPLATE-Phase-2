@@ -5,6 +5,8 @@ function NewPetForm({addPet}) {
 
   // Write the code to retrieve the addPet function using useOutletContext()
 
+  // Write the code to get a function that can be used to navigate to another route using useNavigate() and store it into a variable named navigate
+
   const [formData, setFormData] = useState({
     name: "",
     image: "",
@@ -29,6 +31,8 @@ function NewPetForm({addPet}) {
       image: "",
       animal_type: ""
     });
+
+    // Write the code to call your navigate() function that you created earlier. Pass in an argument of "/" to your navigate function so that the website will navigate to the "/" route when the form is submitted
   }
 
   return (

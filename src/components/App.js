@@ -11,7 +11,7 @@ function App(){
 
     // let component = null;
     // if(route === "/"){
-    //   component = <PetList pets={pets} deletePet={deletePet} updatePet={updatePet}/>
+    //   component = <PetList pets={pets}/>
     // }
     // else if(route === "/add_pet"){
     //   component = <NewPetForm addPet={addPet}/>
@@ -83,9 +83,11 @@ function App(){
           <a className={route === "/" ? "active" : ""} onClick={(event) => navigate(event, "/")} href="/">Home</a>
           <a className={route === "/add_pet" ? "active" : ""} onClick={(event) => navigate(event, "/add_pet")} href="/add_pet">Add Pet</a>
         </nav> */}
+        
         <Header/>
         <NewPetForm addPet={addPet}/>
         <PetList pets={pets}/>
+        
         {/* {component} */}
       </div>
     );

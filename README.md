@@ -12,7 +12,7 @@
 
 ## Setup
 
-Please make sure that you are inside the folder for this repository (the `SE-NYC-071524-Phase-2` folder) before following these instructions for setup:
+Please make sure that you are inside the folder for this repository (the `SE-NYC-TEMPLATE-Phase-2` folder) before following these instructions for setup:
 
 1. Run the following command in the terminal to create a new React application named `pets-app`:
 

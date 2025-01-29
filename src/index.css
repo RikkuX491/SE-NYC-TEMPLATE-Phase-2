@@ -120,3 +120,18 @@ input:focus {
     width: calc(20% - 2rem);
   }
 }
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.dark-mode-button {
+  background-color: gray;
+  color: white;
+  border-radius: 30px;
+  width: 7%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
